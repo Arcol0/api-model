@@ -23,6 +23,7 @@ def train_model(df: pd.DataFrame) -> ClassifierMixin:
     x_train, x_test, y_train, y_test = train_test_split(x,y, test_size=0.20, random_state=42)
     #train model
     model.fit(x_train,y_train)
+    model.score (x_test,y_test)
     #evaluate model
     score = model.score(x_test, y_test)
     print(f"model score: {score}")
