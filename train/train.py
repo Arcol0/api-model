@@ -40,7 +40,7 @@ def train_model(df: pd.DataFrame) -> ClassifierMixin:
 
 
 if __name__ == "__main__":
-    df = ingest_data("D:\OneDrive\Documents\GitHub\api-model\train\train.py")
+    df = ingest_data("train\train.py")
     df = clean_data(df)
     model = train_model(df)
     joblib.dump(model, "model_titanic.joblib")
